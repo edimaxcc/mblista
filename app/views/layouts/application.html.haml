@@ -1,0 +1,42 @@
+!!!
+%html{:lang => :en}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+      %link{:href => "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", :rel => "stylesheet"}
+        %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+        %script{:src => "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"}
+
+
+%title Sodibee Library Manager
+ 
+
+
+
+%body
+.container-fluid
+  %ul.nav.nav-tabs
+    %li.active{:role => "navegation"}
+      %a{:href => "/"} Home
+    %li{:role => "presentation"}
+      %a{:href => "/books"} Books
+    %li{:role => "presentation"}
+      %a{:href => "/authors"} Authors
+    %li{:role => "presentation"}
+      %a{:href => "/posts"} Posts 
+
+
+
+.container 
+
+  = yield
+   
+  .footer
+    %P
+    %p
+    %p Packt Publishing &copy; Company 2011
+
+= javascript_include_tag "application" 
+= stylesheet_link_tag "application"
+= csrf_meta_tags
+

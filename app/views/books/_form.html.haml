@@ -1,0 +1,38 @@
+= form_for @book, html: { class: "form form-horizontal book" } do |f|
+  .form-group
+    = f.label :title, class: 'control-label'
+    .controls
+      = f.text_field :title, class: 'form-control', required: true
+    = error_span(@book[:title])
+  .form-group
+    = f.label :publisher, class: 'control-label'
+    .controls
+      = f.text_field :publisher, class: 'form-control', required: true
+    = error_span(@book[:publisher])
+  .form-group
+    = f.label :published_on, class: 'control-label'
+    .controls
+      = f.text_field :published_on, class: 'form-control', required: true
+    = error_span(@book[:published_on])
+  .form-group
+    = f.label :price, class: 'control-label'
+    .controls
+      = f.text_field :price, class: 'form-control', required: true
+    = error_span(@book[:price])
+  .form-group
+    = f.label :votes, class: 'control-label'
+    .controls
+      = f.text_field :votes, class: 'form-control', required: true
+    = error_span(@book[:votes])
+  .form-group
+    = f.label :author_id, class: 'control-label'
+    .controls
+      = f.text_field :author_id, class: 'form-control', required: true
+    = error_span(@book[:author_id])
+  .form-group
+    = f.label :category_ids, class: 'control-label'
+    .controls
+      = f.text_field :category_ids, class: 'form-control', required: true
+    = error_span(@book[:category_ids])
+  = f.submit nil,class: 'btn btn-primary'
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), books_path, :class => 'btn btn-default'

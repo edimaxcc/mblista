@@ -1,0 +1,9 @@
+%p.fields
+= f.fields_for :address do |a|
+  %p.field1
+  = a.input :street
+  %p.field2
+  = a.input :zip
+  %p.field3
+  = a.input :state
+  =# a.input :country

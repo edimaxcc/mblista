@@ -1,0 +1,3 @@
+class Purchase
+  include Mongoid::Document
+end
