@@ -8,6 +8,12 @@ GIT
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
 
+GIT
+  remote: git://github.com/ryanb/nested_form.git
+  revision: 1b0689dfb4d230ceabd278eba159fcb02f23c68a
+  specs:
+    nested_form (0.3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -43,6 +49,11 @@ GEM
     builder (3.2.2)
     commonjs (0.2.7)
     connection_pool (2.1.1)
+    countries (0.9.3)
+      currencies (~> 0.4.2)
+    country_select (2.1.1)
+      countries (>= 0.9.3, < 0.10.0)
+    currencies (0.4.2)
     erubis (2.7.0)
     execjs (2.2.2)
     haml (4.0.6)
@@ -83,7 +94,6 @@ GEM
       connection_pool (~> 2.0)
       optionable (~> 0.2.0)
     multi_json (1.10.1)
-    nested_form (0.3.2)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     optionable (0.2.0)
@@ -157,12 +167,13 @@ PLATFORMS
 
 DEPENDENCIES
   bson_ext
+  country_select
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
   less-rails
   mongoid!
-  nested_form
+  nested_form!
   rails (= 4.1.8)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

@@ -1,8 +1,13 @@
 = simple_nested_form_for(@author, :html => {:class => 'well formhorizontal'}) do |f|
-  = f.input :name           
-  = render 'shared/address', :f => f
 
-  %h2 Books
+
+  %h2 Author
+  %fieldset{:class => 'well'}
+    = f.input :name           
+
+    = render 'shared/address', :f => f
+
+  %h2 Book
   = f.fields_for :books do |b|
     %fieldset{:class => 'well'}
       = b.input :title

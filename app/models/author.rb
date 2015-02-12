@@ -2,7 +2,7 @@ class Author
   include Mongoid::Document
 
   field :name, type: String
-
+  
   #attr_accessible :name
   
   has_one :address, as: :location, autosave: true, dependent: :destroy

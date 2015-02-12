@@ -14,7 +14,7 @@
     - @posts.each do |post|
       %tr
         %td=# link_to post.id, post_path(post)
-        %td= post.title
+        %td= link_to post.title, post_path(post)
         %td= post.body
         %td= post.starred
         %td=#l post.created_at

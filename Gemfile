@@ -7,7 +7,8 @@ gem 'less-rails'
 gem "jquery-rails"
 gem 'haml-rails'
 gem 'simple_form'
-gem 'nested_form'
+gem 'nested_form', :git => 'git://github.com/ryanb/nested_form.git' 
+gem 'country_select'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use SCSS for stylesheets
