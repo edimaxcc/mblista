@@ -29,15 +29,12 @@ class AuthorsController < ApplicationController
   # POST /authors
   # POST /authors.json
   def create
-    @author = Author.new(params[:author])
-     if @author.save
-        format.html { redirect_to @author, notice: 'Author was successfully created.' }
-        format.json { render :show, status: :created, location: @author }
-      else
-        format.html { render :new }
-        format.json { render json: @author.errors, status: :unprocessable_entity }
-    end
-  end
+    @author = Author.new(author_params)
+    @author.save!
+    redirect_to authors_path, notice: "Author created successfully"
+  rescue
+    render :new
+   end
 
   # PATCH/PUT /authors/1
   # PATCH/PUT /authors/1.json
@@ -71,6 +68,6 @@ class AuthorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def author_params
-      params[:author]
+      params.require(:author).permit(:name)
     end
 end
