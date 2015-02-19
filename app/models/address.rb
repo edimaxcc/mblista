@@ -8,5 +8,5 @@ class Address
   field :country, type: String
 
   belongs_to :location, polymorphic: true
-
+  belongs_to :author
 end

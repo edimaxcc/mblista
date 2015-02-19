@@ -2,9 +2,12 @@
   .row 
     .col-xs-6.col-md-3
       = f.input :name
+      %Address
+      #address
+
       = render 'shared/address', :f => f
    
-  = f.fields_for :books do |b|
+  = f.simple_fields_for :books do |b|
     .row
       .col-xs-6.col-md-3 
         = b.input :title
@@ -12,6 +15,5 @@
         = b.input :published_on
         = b.association :categories, collection: Category.all
         = b.link_to_remove "Remove", :class => 'btn btn-danger btn-mini'
-        
   = f.link_to_add "Add Book", :books, :class => 'btn btn-success'
   = f.submit :class => 'btn-primary'

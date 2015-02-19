@@ -6,6 +6,7 @@
 // the compiled file.
 //
 //= require jquery
+//= require cocoon
 //= require jquery_ujs
-//= require twitter/bootstrap
+//= require bootstrap-sprockets
 //= require_tree .
