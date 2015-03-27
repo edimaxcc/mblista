@@ -1,7 +1,8 @@
 class Comment
   include Mongoid::Document
-  field :name, type: String
-  field :content, type: String
+  
+  field :name
+  field :content
 
   belongs_to :post
 

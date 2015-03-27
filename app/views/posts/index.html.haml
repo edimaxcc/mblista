@@ -16,7 +16,7 @@
         %td=# link_to post.id, post_path(post)
         %td= link_to post.title, post_path(post)
         %td= post.body
-        %td= post.starred
+        %td=# post.starred
         %td=#l post.created_at
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")), edit_post_path(post), :class => 'btn btn-default btn-xs'

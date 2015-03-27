@@ -3,10 +3,16 @@ Rails.application.routes.draw do
   resources :authors do
     resources :books
   end
+
+  resources :posts do
+    resources :comments
+  end
+
   resources :books
-  resources :posts
+  
   resources :orders
   resource  :categories
+  
   root :to => 'authors#index'
 end
   

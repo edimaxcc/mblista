@@ -15,10 +15,12 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
+    
   end
 
   # GET /posts/1/edit
   def edit
+    
   end
 
   # POST /posts
@@ -70,6 +72,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body, :starred)
+      params.require(:post).permit(:title, :body, :starred, comments_attributes: [ :name, :content ])
     end
 end

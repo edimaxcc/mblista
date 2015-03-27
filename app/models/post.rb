@@ -1,8 +1,10 @@
 class Post
   include Mongoid::Document
-  field :title, type: String
-  field :body, type: String
-  field :starred, type: Mongoid::Boolean
+  
+  field :title
+  field :body
+  field :starred, type: Date
 
-  has_many :comment
+  has_many :comments
+  
 end

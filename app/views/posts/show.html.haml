@@ -1,6 +1,6 @@
 - model_class = Post
 .page-header
-  %h1=t '.title', :default => model_class.model_name.human.titleize
+  %h1= t '.title', :default => model_class.model_name.human.titleize
 
 %p
   %strong= model_class.human_attribute_name(:title) + ':'
@@ -13,7 +13,17 @@
 %p
   %strong= model_class.human_attribute_name(:starred) + ':'
   %br
-  = @post.starred
+  =# @post.starred
+
+- @post.comments.each  do | comment|
+  = comment.name
+  %br
+  = comment.content
+
+
+  %br
+  = render "shared/comment"
+
 
 
 = link_to t('.back', :default => t("helpers.links.back")), posts_path, :class => 'btn btn-default'

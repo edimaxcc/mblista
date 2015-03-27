@@ -3,16 +3,16 @@
     = f.label :title, class: 'control-label'
     .controls
       = f.text_field :title, class: 'form-control', required: true
-    = error_span(@post[:title])
+      =# error_span(@post[:title])
   .form-group
     = f.label :body, class: 'control-label'
     .controls
       = f.text_area :body, class: 'form-control', required: true
-    = error_span(@post[:body])
+    =# error_span(@post[:body])
   .form-group
     = f.label :starred, class: 'control-label'
     .controls
       = f.text_field :starred, class: 'form-control', required: true
-    = error_span(@post[:starred])
+    =# error_span(@post[:starred])
   = f.submit nil,class: 'btn btn-primary'
   = link_to t('.cancel', :default => t("helpers.links.cancel")), posts_path, :class => 'btn btn-default'

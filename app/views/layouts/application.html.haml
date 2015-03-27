@@ -8,23 +8,29 @@
         %script{:src => "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"}
 
 
-%title Sodibee Library Manager
+%title MB Movies & BOOKS
  
 
 
 
-%body
-.container-fluid
-  %ul.nav.nav-tabs
-    %li.active{:role => "navegation"}
-      %a{:href => "/"} Home
-    %li{:role => "presentation"}
-      %a{:href => "/books"} Books
-    %li{:role => "presentation"}
-      %a{:href => "/authors"} Authors
-    %li{:role => "presentation"}
-      %a{:href => "/posts"} Posts 
-
+%nav.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{"aria-controls" => "navbar", "aria-expanded" => "false", "data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "#"} M&B
+    #navbar.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li.active
+          %a{:href => "/books"} Books
+        %li
+          %a{:href => "/posts"} Posts
+        %li
+          %a{:href => "/authors"} Authors
+    / /.nav-collapse
 
 
 .container 
