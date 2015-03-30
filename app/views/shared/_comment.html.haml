@@ -2,9 +2,10 @@
 = form_for [@post, Comment.new], html: { class: "form form-horizontal post" } do |f|
   .form-group
   %p.field1
-  = f.label :bilu, class: 'control-label'
+  = f.label :name, class: 'control-label'
+  
   = f.text_field :name
   %p
-  = f.text_area :content, class: 'form-control', required: true
+  = f.text_area :content, class: 'form-control', :rows => 5, required: true
   %p
   = f.submit nil,class: 'btn btn-primary'

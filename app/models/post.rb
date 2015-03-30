@@ -3,7 +3,7 @@ class Post
   
   field :title
   field :body
-  field :starred, type: Date
+  field :starred, :type => Date
 
   has_many :comments
   

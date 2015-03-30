@@ -1,4 +1,4 @@
-= simple_nested_form_for @author, :html => { :class => 'form-horizontal' } do |f|
+= simple_nested_form_for :authors, :html => { :class => 'form-horizontal' } do |f|
   .row 
     .col-xs-6.col-md-3
       = f.input :name
@@ -12,8 +12,11 @@
       .col-xs-6.col-md-3 
         = b.input :title
         = b.input :publisher
-        = b.input :published_on
-        = b.association :categories, collection: Category.all
+        = b.label :published_on
+        %br
+        = b.date_select :published_on
+        =# b.association :categories, collection: Category.all
         = b.link_to_remove "Remove", :class => 'btn btn-danger btn-mini'
   = f.link_to_add "Add Book", :books, :class => 'btn btn-success'
   = f.submit :class => 'btn-primary'
+  

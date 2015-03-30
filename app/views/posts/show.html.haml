@@ -15,11 +15,11 @@
   %br
   =# @post.starred
 
-- @post.comments.each  do | comment|
-  = comment.name
-  %br
-  = comment.content
-
+- if @post.comments.size > 0
+  %h2 Comments
+  - for comment in @post.comments
+    %h3= comment.name
+    %p= comment.content
 
   %br
   = render "shared/comment"
